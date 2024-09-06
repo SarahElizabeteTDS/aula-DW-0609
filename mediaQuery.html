@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    
+    <style>
+        body
+        {
+            background-color: chartreuse;
+        }
+        h1
+        {
+            font-size: 20px;
+        }   
+
+        .image-grande img
+        {
+            display: none;
+        }
+
+        .image-pequena img
+        {
+            display: none;
+        }
+
+        /*Especifico para celulares*/
+        @media screen and (max-width: 767px)
+        {
+            body
+            {
+                background-color: darkcyan;
+                color: #fff;
+            }
+            h1
+            {
+                font-size: 20px;
+            }
+            .image-pequena img
+            {
+                display: block;
+                max-width:100%
+            }
+            .image-grande img
+            {
+                display: none;
+            }
+        }
+
+        /*Especifico para tablets*/
+        @media screen and (min-width: 768px) and (max-width: 1023px)
+        {
+            body
+            {
+                background-color: purple;
+                color: #fff;
+            }
+            h1
+            {
+                font-size: 40px;
+            }
+            .image-pequena img
+            {
+                display: block;
+                max-width:100%
+            }
+            .image-grande img
+            {
+                display: none;
+            }
+        }
+        @media screen and (min-width: 1024px)
+        {
+            body
+            {
+                background-color: red;
+                color: #fff;
+            }
+            h1
+            {
+                font-size: 60px;
+            }
+            .image-pequena img
+            {
+                display: none;
+            }
+            .image-grande img
+            {
+                display: block;
+                max-width:100%
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <h1>Media Queries</h1>
+
+    <div class="image-grande">
+        <img src="https://placehold.co/1000x400" alt="">
+    </div>
+
+    <div class="image-pequena">
+        <img src="https://placehold.co/500x400" alt="">
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores porro minima reiciendis, voluptates eaque ullam saepe cum, reprehenderit omnis dolores error veniam expedita quos hic minus labore ratione possimus molestias.
+    Et earum eveniet corporis, dolorum quam atque rerum! Inventore optio dolore commodi impedit asperiores quia eveniet fuga sint eius exercitationem debitis sequi corporis, eum ut ullam repudiandae quas vero magnam?
+    Provident enim repudiandae quam sapiente perferendis corporis ratione reiciendis, ipsa, expedita neque eos, recusandae molestias cum asperiores repellendus. Voluptatibus nobis non aperiam, quasi ratione corporis dicta minus eum nemo ad!</p>
+
+</body>
+</html>
